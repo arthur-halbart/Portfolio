@@ -7,13 +7,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.typo__crb{
-  font-family: "Mr Dafoe", 'cursive';
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 28%;
+  color: $c-text;
 }
 
 
@@ -26,72 +20,152 @@ body {
   justify-content: center;
   flex-direction: column;
 
-  &__header{
-    background-color: blueviolet;
+}
 
-    .title__P{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: antiquewhite;
+.section__header{
 
-        h1{
-          font-family: "fit", sans-serif;
-          font-weight: 400;
-          font-style: normal;
-          letter-spacing: 23%;
-          text-align: center;
-          line-height: 0;
-          padding-left: 7%;
-          font-size: clamp(6.5625rem, 0.0625rem + 26.6667vw, 24.0625rem);
-        }
-
-        .arthur{
-          position: absolute;
-          top: clamp(3.4375rem, 0.6518rem + 11.4286vw, 10.9375rem);
-          font-size: clamp(1.4375rem, 0.2536rem + 4.8571vw, 4.625rem);
-          color: $c-bleu;
-        }
-    }
-
-    .element__header{
+  .title__P{
       position: relative;
-      width: clamp(21.5625rem, -1.6286rem + 95.1429vw, 84rem);
-      background-color: aquamarine;
+      top: -5%;
+      z-index: 20;
       display: flex;
-      justify-content: space-between;
-      align-items: end;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-      p{
-        font-family: "futura-pt-bold", sans-serif;
+      h1{
+        font-family: "fit", sans-serif;
         font-weight: 400;
         font-style: normal;
-        text-transform: uppercase;
-
-        span{
-          font-family: "Mr Bedfort", cursive;
-          font-weight: 400;
-          font-style: normal;
-        }
+        letter-spacing: 28%;
+        text-align: center;
+        line-height: 0;
+        padding-left: 5%;
+        font-size: clamp(6.5625rem, 0.0625rem + 26.6667vw, 24.0625rem);
       }
 
-      .elgraphique__header{
-        width: clamp(8.5rem, 5.25rem + 13.3333vw, 17.25rem);
-        height: clamp(4.00375rem, 2.473rem + 6.28vw, 8.125rem);
-        background-color: brown;
+      .arthur{
+         position: absolute;
+         top: clamp(3.4375rem, 0.6518rem + 11.4286vw, 10.9375rem);
+         font-size: clamp(1.4375rem, 0.2536rem + 4.8571vw, 4.625rem);
+         color: $c-bleu;
       }
-    }
-
-    &--02{
-      p{
-        text-transform: none;
-      }
-    }
-
-
   }
 
+  .img__header{
+      position: absolute;
+      z-index: 10;
+      top: clamp(6.6875rem, 2.2071rem + 18.381vw, 18.75rem);
+      width: clamp(16.25rem, 11.0964rem + 21.1429vw, 30.125rem);
+      height: clamp(21.375rem, 14.5964rem + 27.8095vw, 39.625rem);
+      background-color:darkcyan;
+  }
+
+  .element__header{
+    position: relative;
+    width: clamp(21.5625rem, -1.6286rem + 95.1429vw, 84rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    top: clamp(-25rem, -34.2857rem + 38.0952vw, 0rem);
+    border-top: 1px solid #3E3E3E;
+
+
+    p{
+      font-family: "futura-pt-bold", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: uppercase;
+      text-align: right;
+
+      span{
+        font-family: "Mr Bedfort", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+
+    .elgraphique__header{
+      width: clamp(8.5rem, 5.25rem + 13.3333vw, 17.25rem);
+      height: clamp(4.00375rem, 2.473rem + 6.28vw, 8.125rem);
+      background-color: brown;
+    }
+  }
+
+  .element__header_02{
+    margin-top: clamp(1.38125rem, -0.1486rem + 6.2762vw, 5.5rem);
+
+    p{
+      text-transform: none;
+      font-weight: 200;
+      width: 120px;
+      text-align: left;
+      line-height: 1;
+    }
+  }
+
+
+
+}
+
+
+.section__perso{
+  margin-top: 210px;
+  background-color: #3E3E3E;
+  width: 100%;
+  height: 300px;
+}
+
+
+
+.section__projets{
+
+  margin-top: 210px;
+
+  .elgraphique__big{
+    width: 100%;
+    background-color: brown;
+    height: clamp(1.5rem, 0.4786rem + 4.1905vw, 4.25rem);
+  }
+
+  a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $c-text;
+    text-decoration: none;
+    border-bottom: 1px solid #3E3E3E ;
+    border-top: 1px solid #3E3E3E ;
+
+    li{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h3{
+        font-family: "fit", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 28%;
+        text-align: center;
+        padding-left: 3%;
+        line-height: 0;
+        font-size: clamp(4.75rem, 0.2464rem + 18.4762vw, 16.875rem);
+      }
+  
+      p{
+        position: absolute;
+        top: clamp(3.4375rem, 0.6518rem + 11.4286vw, 10.9375rem);
+        font-size: clamp(1.4375rem, 0.2536rem + 4.8571vw, 4.625rem);
+        color: $c-bleu;
+      }
+    }
+
+  }
 }
 
 
