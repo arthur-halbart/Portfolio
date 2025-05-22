@@ -64,11 +64,20 @@ body {
   .element__header{
     position: relative;
     width: clamp(21.5625rem, -1.6286rem + 95.1429vw, 84rem);
+    //top: clamp(26.25rem, 36rem + -40vw, 0rem);
     display: flex;
     justify-content: space-between;
     align-items: end;
-    top: clamp(-25rem, -34.2857rem + 38.0952vw, 0rem);
+    top : 26.25rem;
     border-top: 1px solid #3E3E3E;
+
+
+    @media (min-width: 780px) {
+          top : 0%;
+        
+      
+
+    }
 
 
     p{
@@ -129,6 +138,7 @@ body {
   }
 
   a{
+  
     position: relative;
     display: flex;
     align-items: center;
@@ -138,6 +148,11 @@ body {
     text-decoration: none;
     border-bottom: 1px solid #3E3E3E ;
     border-top: 1px solid #3E3E3E ;
+
+
+    *{
+      cursor: pointer;
+    }
 
     li{
       position: relative;
