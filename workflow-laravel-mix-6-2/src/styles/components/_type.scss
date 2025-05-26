@@ -1,5 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: $size-text;
   line-height: 1.4;
   color: $c-text;
@@ -9,19 +11,74 @@ body {
   justify-content: center;
   color: $c-text;
   position: relative;
+  overflow-x: hidden;
 }
 
-.element__graphique__fond{
-  position: fixed;
-  z-index: -1;
-  width: 989px;
-  height: 989px;
+////////////////////:: Element de fond + souris
+
+.fond{
   flex-shrink: 0;
+  ///// IA m'a aidé a avoir un border-raduis irrégulier
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
   background: linear-gradient(151deg, #4ED8CF 46.44%, #88DAEF 64.82%, #FEE1B9 72.52%);
   filter: blur(85px);
   animation: animate 6s linear infinite;
 }
+
+.element__graphique__fond_fixe{
+  position: absolute;
+  z-index: -1;
+  top: -9%;
+  left: -9%;
+  width: 1000px;
+  height: 1000px;
+  
+}
+
+.element__graphique__fond{
+  position: fixed;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  transition: 0.4s;
+}
+
+.element__graphique__fond--fullScreen--Janus{
+  position: fixed;
+  background: linear-gradient(151deg, #6E7E82 23.6%, #C398DC 33.53%, #DBD0C2 72.52%);
+  z-index: -1;
+  width: 3000px;
+  height: 3000px;
+  transition: 0.4s;
+}
+
+.element__graphique__fond--fullScreen--Prux{
+  position: fixed;
+  background: linear-gradient(151deg, #798588 23.6%, #55D5E5 33.53%, #FFF 72.52%);
+  z-index: -1;
+  width: 3000px;
+  height: 3000px;
+  transition: 0.4s;
+}
+
+.element__graphique__fond--fullScreen--DataPlay{
+  position: fixed;
+  background: linear-gradient(151deg, #3B4649 23.6%, #D84E4E 31.48%, #EBD3B2 72.52%);
+  z-index: -1;
+  width: 3000px;
+  height: 3000px;
+  transition: 0.4s;
+}
+
+.element__graphique__fond--fullScreen--DesignFiction{
+  position: fixed;
+  background: linear-gradient(151deg, #292929 23.6%, #E3581C 33.53%, #CEC4C4 72.52%);
+  z-index: -1;
+  width: 3000px;
+  height: 3000px;
+  transition: 0.4s;
+}
+
 
 @keyframes animate {
   0%{
@@ -33,6 +90,9 @@ body {
   }
   
 }
+
+
+///////////////////////////////////////////////////////////
 
 main{
   border-left: 1px solid #000;
@@ -48,8 +108,9 @@ main{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
+
+///////////////////////////////::header
 
 .section__header{
   display: flex;
@@ -131,6 +192,8 @@ main{
 
 }
 
+///////////////////////////////::presentation
+
 
 .section__presentation{
   display: flex;
@@ -151,23 +214,53 @@ main{
   }
 
   .presentation__text{
-    background-color: blue;
+
     width: clamp(19.75rem, 9.625rem + 45vw, 50.125rem);
   }
 }
 
 
+///////////////////////////////::projets
+
+
 .section__projets{
 
-    height:clamp(34.0625rem, 30.0417rem + 17.8704vw, 46.125rem);
+    height:auto;
     width: clamp(19.75rem, -1.7292rem + 95.463vw, 84.1875rem);;
 
   div{
-    border-bottom: 1px solid #000;
 
     h3{
       font-size: clamp(2.5625rem, -0.5417rem + 13.7963vw, 11.875rem);
       line-height: 0;
+      padding-top: 331,1px;
+
+
     }
+  }
+
+  a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    font-weight: 600;
+    font-size: 2rem;
+
+
+
+    .section__projets__role{
+      font-size: 1rem;
+      font-weight: 400;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  :hover{
+    color: $c-fond;
+    cursor: pointer;
   }
 }

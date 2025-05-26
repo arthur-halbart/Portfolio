@@ -1,8 +1,15 @@
-console.info('Hello world');
+'use strict'
+
+var button = document.querySelector('.button')
+var button2 = document.querySelector('.button2')
+var button3 = document.querySelector('.button3')
+var button4 = document.querySelector('.button4')
+var elementFond = document.querySelector('.element__graphique__fond')
+
 
   document.addEventListener('mousemove', function(e) {
     const follower = document.querySelector('.element__graphique__fond');
-    const size = 989; 
+    const size = 300; 
   
     const x = e.clientX - size / 2;
     const y = e.clientY - size / 2;
@@ -10,3 +17,137 @@ console.info('Hello world');
     follower.style.left = x + 'px';
     follower.style.top = y + 'px';
   });
+
+
+
+
+////////////////////////////////////////////////////////////////////:
+
+  button.addEventListener("mouseover", function() {
+    elementFond.classList.add('element__graphique__fond--fullScreen--Janus');
+
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 3000; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+  
+button.addEventListener('mouseleave', function() {
+    elementFond.classList.remove('element__graphique__fond--fullScreen--Janus');
+    
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 300; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+
+
+////////////////////////////::
+
+button2.addEventListener("mouseover", function() {
+    elementFond.classList.add('element__graphique__fond--fullScreen--Prux');
+
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 3000; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+  
+button2.addEventListener('mouseleave', function() {
+    elementFond.classList.remove('element__graphique__fond--fullScreen--Prux');
+    
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 300; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+
+////////////////////////////::
+
+
+button3.addEventListener("mouseover", function() {
+    elementFond.classList.add('element__graphique__fond--fullScreen--DataPlay');
+
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 3000; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+  
+button3.addEventListener('mouseleave', function() {
+    elementFond.classList.remove('element__graphique__fond--fullScreen--DataPlay');
+    
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 300; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+
+////////////////////////////::
+
+
+button4.addEventListener("mouseover", function() {
+    elementFond.classList.add('element__graphique__fond--fullScreen--DesignFiction');
+
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 3000; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
+  
+button4.addEventListener('mouseleave', function() {
+    elementFond.classList.remove('element__graphique__fond--fullScreen--DesignFiction');
+    
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.querySelector('.element__graphique__fond');
+        const size = 300; 
+      
+        const x = e.clientX - size / 2;
+        const y = e.clientY - size / 2;
+      
+        follower.style.left = x + 'px';
+        follower.style.top = y + 'px';
+      });
+});
