@@ -30,6 +30,14 @@ a{
   animation: animate 6s linear infinite;
 }
 
+.fond__prux{
+  position: absolute;
+  background: linear-gradient(151deg, #798588 23.6%, #55D5E5 33.53%, #FFF 72.52%);
+  top: -10%;
+  left: -10%;
+  transform-origin: center;
+}
+
 .element__graphique__fond_fixe{
   position: absolute;
   z-index: -1;
@@ -334,3 +342,35 @@ footer{
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
+/////////////////////////::Case Study
+
+
+.section__header__CS{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h1{
+    font-size: clamp(2.75rem, 1.4792rem + 5.6481vw, 6.5625rem);
+  }
+
+  .prt2__header__CS{
+    width: clamp(19.75rem, -1.75rem + 95.5556vw, 84.25rem);
+    height: auto;
+    background-color: #C398DC;
+    display: flex;
+    flex-wrap:wrap ;
+
+    .img__header__CS{
+      width: clamp(19.75rem, 3.9583rem + 70.1852vw, 67.125rem);
+      background-color: #88DAEF;
+    }
+
+    .img__header__CS__p{
+      width: clamp(19.75rem, 3.9583rem + 70.1852vw, 67.125rem);
+      height: clamp(10.8125rem, 2.1667rem + 38.4259vw, 36.75rem);
+    }
+
+    
+  }
+}
