@@ -14,6 +14,17 @@ body {
   overflow-x: hidden;
 }
 
+
+#noiseCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 a{
   color: $c-text;
   text-decoration: none;
@@ -33,6 +44,30 @@ a{
 .fond__prux{
   position: absolute;
   background: linear-gradient(151deg, #798588 23.6%, #55D5E5 33.53%, #FFF 72.52%);
+  top: -10%;
+  left: -10%;
+  transform-origin: center;
+}
+
+.fond__janus{
+  position: absolute;
+  background: linear-gradient(151deg, #6E7E82 23.6%, #C398DC 33.53%, #DBD0C2 72.52%);
+  top: -10%;
+  left: -10%;
+  transform-origin: center;
+}
+
+.fond__dataplay{
+  position: absolute;
+  background: linear-gradient(151deg, #3B4649 23.6%, #D84E4E 31.48%, #EBD3B2 72.52%);
+  top: -10%;
+  left: -10%;
+  transform-origin: center;
+}
+
+.fond__designFiction{
+  position: absolute;
+  background: linear-gradient(151deg, #292929 23.6%, #E3581C 33.53%, #CEC4C4 72.52%);
   top: -10%;
   left: -10%;
   transform-origin: center;
@@ -190,15 +225,29 @@ main{
       @media ( min-width: 1080px){
         height: clamp(47.1875rem, 17.375rem + 44.1667vw, 57.125rem);
       }
+    }
 
-      .div__h3{
-        display: flex;
-        align-items: center;
-        justify-content: first baseline;
-        h3{
-          text-transform: uppercase;
-        }
+    .div__h3{
+      display: flex;
+      align-content: center;
+      align-items: baseline;
+      h3{
+        text-transform: uppercase;
+        font-size: 1,8125rem;
+        line-height: 0.7;
+      }
+    }
+    
 
+    .div__p{
+      display: flex;
+      align-content: center;
+      align-items: end;
+      justify-content: end;
+      p{
+        text-transform: uppercase;
+        font-size: clamp(0.6875rem, 0.625rem + 0.2778vw, 0.875rem);
+        text-align: right;
       }
     }
   }
@@ -247,6 +296,7 @@ main{
       font-size: clamp(2.5625rem, -0.5417rem + 13.7963vw, 11.875rem);
       line-height: 0;
       padding-top: 331,1px;
+      pointer-events: none;
 
 
     }
@@ -287,7 +337,7 @@ main{
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding-left: 11px;
+  //padding-left: 11px;
 
   h3{
     font-size: clamp(2.25rem, 1.0417rem + 5.3704vw, 5.875rem);
@@ -296,7 +346,7 @@ main{
   }
 
   div{
-    padding-left: 0;
+    //padding-left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -352,25 +402,73 @@ footer{
 
   h1{
     font-size: clamp(2.75rem, 1.4792rem + 5.6481vw, 6.5625rem);
+    border: 1px solid #000;
   }
 
   .prt2__header__CS{
+    border: 1px solid #000;
     width: clamp(19.75rem, -1.75rem + 95.5556vw, 84.25rem);
     height: auto;
-    background-color: #C398DC;
     display: flex;
-    flex-wrap:wrap ;
+    height: clamp(10.8125rem, 2.1667rem + 38.4259vw, 36.75rem);
 
     .img__header__CS{
       width: clamp(19.75rem, 3.9583rem + 70.1852vw, 67.125rem);
       background-color: #88DAEF;
+
+    }    
+  }
+}
+
+.section__miseSituation{
+  width: clamp(19.75rem, -1.75rem + 95.5556vw, 84.25rem);
+  border: 1px solid #000;
+
+  h3{
+    line-height: 1;
+    font-size: clamp(3.25rem, 0.8125rem + 10.8333vw, 10.5625rem);
+    border-bottom: 1px solid #000;
+  }
+
+  .text__CS{
+    display: flex;
+    flex-direction:column;
+    p{
+      width: clamp(18.125rem, 7.5rem + 47.2222vw, 50rem);
+    }
+  }
+}
+
+.section__priseContact{
+  width: clamp(19.75rem, -1.75rem + 95.5556vw, 84.25rem);
+  border: 1px solid #000;
+
+  .div{
+    h3{
+      font-size: clamp(1.8125rem, -0.0417rem + 8.2407vw, 7.375rem);
+    }
+  }
+
+  .text__pC{
+    display: flex;
+    width: clamp(19.75rem, 12.2917rem + 33.1481vw, 42.125rem);
+    height: clamp(19.75rem, 12.2917rem + 33.1481vw, 42.125rem);
+    border: 1px solid #000;
+
+    div{
+      background-color: #4ED8CF;
     }
 
-    .img__header__CS__p{
-      width: clamp(19.75rem, 3.9583rem + 70.1852vw, 67.125rem);
-      height: clamp(10.8125rem, 2.1667rem + 38.4259vw, 36.75rem);
-    }
+  }
+  
+}
 
-    
+.section__problèmeMajeurs{
+
+  div{
+    h3{
+      font-size: clamp(1.8125rem, -0.0417rem + 8.2407vw, 7.375rem);
+      width: 100%;
+    }
   }
 }
