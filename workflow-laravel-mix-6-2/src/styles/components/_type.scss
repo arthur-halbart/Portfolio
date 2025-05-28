@@ -428,6 +428,7 @@ footer{
     line-height: 82%;
     font-size: clamp(3.25rem, 0.8125rem + 10.8333vw, 10.5625rem);
     border-bottom: 1px solid #000;
+    padding-bottom: 3rem;
     }
   }
 
@@ -504,6 +505,8 @@ footer{
   
 }
 
+/////////////////////////////////////////////////////
+
 .section__problèmeMajeurs{
 
   div{
@@ -511,6 +514,153 @@ footer{
       font-size: clamp(1.8125rem, -0.0417rem + 8.2407vw, 7.375rem);
       width: 100%;
       line-height: 82%;
+      padding-bottom: 3rem;
+      border-bottom:1px solid #000 ;
+    }
+  }
+
+
+  .txt_big{
+    width: 100%;
+    border-bottom: 1px solid #000;
+    p{
+      font-size: clamp(1.125rem, 1.0208rem + 0.463vw, 1.4375rem);
+      width: clamp(17.8125rem, 4.3125rem + 60vw, 58.3125rem);
+      padding-left: 11px;
+    }
+
+  }
+.txt{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  width: 100%;
+  border-bottom: 1px solid #000;
+
+  p{
+    width: clamp(17.3125rem, 12.25rem + 22.5vw, 32.5rem);
+    font-size: clamp(1rem, 0.9583rem + 0.1852vw, 1.125rem);
+  }
+}
+
+}
+
+////////////////////////////////////////////////////
+
+.section__premieresIdees{
+
+  div{
+    width: 100%;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    h3{
+      padding-top: 5rem;
+      font-size: clamp(1.8125rem, -0.0417rem + 8.2407vw, 7.375rem);
+    }
+  }
+
+  .img__premieresIdees{
+    width: 100%;
+    img{
+      height: clamp(14.5625rem, 10.5208rem + 17.963vw, 26.6875rem);
+    background-color: #3B4649;
+    }
+  }
+
+  .txt{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .txt_g{
+      font-size: clamp(1.125rem, 0.9583rem + 0.7407vw, 1.625rem);
+    }
+
+    p{
+      width: clamp(17.9375rem, 11.5625rem + 28.3333vw, 37.0625rem);
+
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+
+
+.section__miseCommun{
+  width: clamp(19.75rem, -1.75rem + 95.5556vw, 84.25rem);
+  border: 1px solid #000;
+
+  div{
+    h3{
+    font-size: clamp(3.25rem, 0.8125rem + 10.8333vw, 10.5625rem);
+    border-bottom: 1px solid #000;
+    line-height: 0.9;
+    margin: 0;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    }
+  }
+
+  .bloc__txt{
+    width: 100%;
+    display: flex;
+    border-right: 1px solid #000;
+
+    .txt{
+      font-size: clamp(1rem, 0.8542rem + 0.6481vw, 1.4375rem);
+      width: clamp(19.75rem, 15.375rem + 19.4444vw, 32.875rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p{
+        width: clamp(16.6875rem, 14.5rem + 9.7222vw, 23.25rem);
+      }
+    }
+
+    .img__miseCommun{
+      width: clamp(19.75rem, 9.2083rem + 46.8519vw, 51.375rem);
+      height: clamp(13.5rem, 6.1667rem + 32.5926vw, 35.5rem);
+      background-color: #55D5E5;
+    }
+  }
+
+}
+
+//////////////////////////////////////////////////////
+
+
+.section__approfondissement{
+  div{
+    border-bottom: 1px solid #000;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    h4{
+      font-size: clamp(1.25rem, 0.4583rem + 3.5185vw, 3.625rem);
+      padding-top: 15rem;
+
+    }
+  }
+
+  .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding-left: 0.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    p{
+      font-size: clamp(1rem, 0.9583rem + 0.1852vw, 1.125rem);
+      width: clamp(17.3125rem, 2.25rem + 66.9444vw, 62.5rem);
     }
   }
 }
