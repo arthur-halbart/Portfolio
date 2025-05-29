@@ -143,6 +143,42 @@ a{
 
 ///////////////////////////////////////////////////////////
 
+.section__nav{
+  height: clamp(4.6875rem, 4.4583rem + 1.0185vw, 5.375rem);
+  border: 1px solid #000;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  z-index: 800;
+
+  div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+      padding-left: clamp(1.375rem, 0.875rem + 2.2222vw, 2.875rem);
+    }
+
+    .button_nav{
+      padding-right: clamp(1.375rem, 0.875rem + 2.2222vw, 2.875rem);
+      transition: 0.3s;
+      text-transform: capitalize;
+
+      a:hover{
+        color: $c-fond;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+////////////////////////////://////////////////////////////////////////
+
 main{
   border-left: 1px solid #000;
   border-right: 1px solid #000;
@@ -165,6 +201,7 @@ main{
   display: flex;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
+  margin-top: clamp(4.1875rem, 3.9375rem + 1.1111vw, 4.9375rem);
 
   @media ( min-width: 1080px){
     flex-direction: initial;
@@ -366,8 +403,7 @@ main{
 /////////////////////////////////////////////////
 
 footer{
-  position: absolute;
-  bottom: 0;
+  position: relative;
   left: 0;
   width: 100%;
   background-color: $c-text;
@@ -400,6 +436,7 @@ footer{
   display: flex;
   flex-direction: column;
   //width: 100%;
+  margin-top: clamp(4.1875rem, 3.9375rem + 1.1111vw, 4.9375rem);
 
   div{
     //width: 100%;
@@ -549,8 +586,11 @@ footer{
     div{
       width: clamp(19.75rem, 16.9792rem + 12.3148vw, 28.0625rem);
       height: clamp(9.5rem, 8.125rem + 6.1111vw, 13.625rem);
-      background-color: #C398DC;
+      background-color: #000000;
       border: 1px solid #000;
+      img{
+        object-fit: contain;
+      }
 
     }
   }

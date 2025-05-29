@@ -21,11 +21,33 @@
   </head>
   <body>
 
+    <!-- Bruit-->
     <canvas id="noiseCanvas"></canvas>
-
+    <!-- Element >Fond-->
     <div class="fond element__graphique__fond_fixe"></div>
     <div class="fond element__graphique__fond"></div>
+    <!-- Nav -->
+    <nav class=" section__nav">
+      <div>
+        <div class="logo">
+          <svg width="58" height="28" viewBox="0 0 58 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.55175 5.27536C13.9329 5.27536 16.2617 8.31884 17.3274 10.7942C17.6036 11.4435 17.9194 11.8899 18.472 11.8899C18.9851 11.8899 19.3009 11.4841 19.3009 10.8754C19.3009 9.90145 19.1035 7.66956 18.8667 6.08696H31.8129C31.1419 13.1072 31.2998 20.1681 32.2076 27.1884H18.5115C18.7088 26.0928 18.9062 24.0232 18.9062 22.8464C18.9062 22.1971 18.6693 21.8319 18.1562 21.8319C17.6826 21.8319 17.4063 22.1565 17.13 22.6841C15.7091 25.2406 13.3803 28 8.99917 28C3.5523 28 0 23.7797 0 17.0841C0 9.98261 3.71019 5.27536 9.55175 5.27536ZM13.0646 17.0435C13.0646 18.2609 13.854 19.0725 15.0381 19.0725C16.7748 19.0725 18.1562 17.4493 18.1562 15.7043C18.1562 14.5275 17.4063 13.7565 16.2617 13.7565C14.4855 13.7565 13.0646 15.3391 13.0646 17.0435Z" fill="#313131"/>
+            <path d="M42.1725 0C41.8962 2.5971 41.6199 7.34493 41.6199 10.2261C41.6199 10.9565 41.9752 11.4435 42.4883 11.4435C42.9619 11.4435 43.475 11.0377 43.7513 10.3884C44.817 7.91304 46.5932 5.27536 50.5796 5.27536C55.4739 5.27536 57.6842 8.27826 57.6842 14.1623C57.6842 19.2348 56.7764 23.171 58 27.1884H44.3828C45.0144 22.4406 45.2907 18.7478 45.2907 16.5971C45.2907 14.8522 44.3434 14.2029 43.4356 14.2029C42.6067 14.2029 41.5015 14.8522 41.5015 17.0029C41.5015 19.4377 41.6989 23.2116 42.3699 27.1884H28.7527C29.4237 18.7884 29.2658 8.8058 28.358 0H42.1725Z" fill="#313131"/>
+            </svg>
+        </div>
+        <div class="button_nav">
+          <a href="index.html">
+            <p>Acceuil</p>
+          </a><a href="index.html#presentation">
+            <p>à propos</p>
+          </a><a href="index.html#projets">
+            <p>Les projets</p>
+          </a>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Header -->
     <header class="section section__header">
       <div class="section__header_prt1">
         <div>
@@ -51,12 +73,12 @@
     </header>
 
     <main>
-      <section class="section section__presentation">
+      <section id="presentation" class="section section__presentation">
         <div><img class="img__presentation" src="assets/images/img_header_portfolio 1.webp" alt=""></div>
         <div class="presentation__text"></div>
       </section>
 
-      <section class="section section__projets">
+      <section id="projets" class="section section__projets">
         <div>
           <h3 class="eight">Les projets</h3>
         </div>
@@ -115,7 +137,7 @@
       </section>
     </main>
 
-    <footer class="section section__footer">
+    <footer class="section__footer">
       <div class="logo_secondaire"></div>
       <div class="sous__nav">
         <ul>
