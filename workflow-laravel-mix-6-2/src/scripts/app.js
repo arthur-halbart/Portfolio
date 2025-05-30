@@ -1,10 +1,13 @@
 'use strict'
 
+import { gsap } from "gsap";
+
 var button = document.querySelector('.button')
 var button2 = document.querySelector('.button2')
 var button3 = document.querySelector('.button3')
 var button4 = document.querySelector('.button4')
 var elementFond = document.querySelector('.element__graphique__fond')
+var title = document.querySelector('.eight')
 
 
   document.addEventListener('mousemove', function(e) {
