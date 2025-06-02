@@ -107,8 +107,8 @@ a{
 .element__graphique__fond_fixe{
   position: absolute;
   z-index: -1;
-  top: -9%;
-  left: -9%;
+  top: -16rem;
+  left: -17rem;
   width: 1000px;
   height: 1000px;
   
@@ -172,6 +172,161 @@ a{
 
 
 ///////////////////////////////////////////////////////////
+/// 
+/// 
+
+.section--nav{
+  opacity: 0;
+  pointer-events: none
+}
+
+.menu-btn {
+width: 50px;
+height: 50px;
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 10;
+background: transparent;
+//background: rgba(0, 0, 0, 0.1);
+color: transparent;
+border: 0;
+cursor: pointer;
+  z-index: 150;
+}
+
+
+
+.menu a{
+  font-family: "amandine", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #444;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+.menu li{
+  border: 1px solid #444;
+  background-color: #FEFEFE;
+  border-radius: 30px;
+  box-shadow: 0 5px #444;
+  padding: 12px 18px;
+  background: #fefefe;
+  color: #444;
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 2em;
+  transition: 
+      box-shadow .3s, 
+      transform .3s;
+}
+
+.menu li:hover{
+  box-shadow: 0px 0px #444;
+  transform: translateY(5px);
+}
+
+.menu-btn i {
+display: block;
+width: 100%;
+height: 10%;
+background: #444;
+position: absolute;
+right: 0%;
+transition: all .3s;
+}
+
+.menu-btn i:nth-child(1) {
+top: 0%;
+transition: all .3s;
+}
+.menu-btn i:nth-child(2) {
+top: 50%;
+transform: translateY(-50%);
+}
+.menu-btn i:nth-child(3) {
+bottom: 0%;
+}
+
+.menu-btn:hover i {
+background: #444;
+
+}
+.menu-btn:hover i:nth-child(1) {
+top: 10%;
+}
+.menu-btn:hover i:nth-child(3) {
+bottom: 10%;
+}
+
+.block__btn{
+  width: 100%;
+  border-bottom: 1px solid #444;
+  height: 5em;
+  background-color: #FEFEFE;
+  position: fixed;
+}
+
+.menu-wrapper {
+display: flex;
+justify-content: center;
+  
+align-items: end;
+background: #ccc;
+position: fixed;
+top: 0;
+right: 100%;
+width: 70%;
+height: 100%;
+  border-left: 1px solid #444;
+transition: .3s ease-out;
+  background-color: #FEFEFE;
+  border-bottom: 2px solid #444;
+}
+
+/* open states */
+
+.menu-wrapper.open {
+right: 0;
+}
+
+.menu-btn.open i:nth-child(1) {
+top: 50%;
+transform: rotate(45deg) translateY(-50%);
+transform-origin: right center;
+width: 50%;
+}
+.menu-btn.open i:nth-child(3) {
+bottom: 50%;
+transform: rotate(-45deg) translateY(50%);
+transform-origin: right center;
+width: 50%;
+}
+
+
+
+
+///////////////////////////////////////////////////////////
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  z-index: -1;
+  position: relative;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+///////////////////////////////////////////////////////////
 
 .section__nav{
   height: clamp(4.6875rem, 4.4583rem + 1.0185vw, 5.375rem);
@@ -199,13 +354,19 @@ a{
       transition: 0.3s;
       text-transform: capitalize;
 
-      a:hover{
-        color: $c-fond;
-        transition: 0.3s;
+      a{
+        padding-right: 1Opx;
+
+        :hover{
+          border-right:1px solid #000;
+          transition: 0.3s;
+        }
       }
     }
   }
 }
+
+
 
 ////////////////////////////://////////////////////////////////////////
 
@@ -235,18 +396,24 @@ main{
 
   @media ( min-width: 1080px){
     flex-direction: initial;
+
   }
 
   .section__header_prt1{
     display: flex;
     align-items: center;
     flex-direction:column ;
-    width: clamp(19.75rem, 4.8125rem + 66.3889vw, 64.5625rem);
 
     div{
       border-bottom: 1px solid #000;
       border-left: 1px solid #000;
-      width: clamp(19.75rem, 4.8125rem + 66.3889vw, 64.5625rem);
+      border-right: 1px solid #000;
+      width: 100%;
+
+      @media ( min-width: 1080px){
+        border-right: 0px solid #000;
+    
+      }
 
       h1,h2{
         font-size: clamp(3.625rem, 0.875rem + 12.2222vw, 11.875rem);
@@ -275,12 +442,12 @@ main{
     display: flex;
     align-items: center;
     flex-direction:column ;
-    width: clamp(19.75rem, 4.8125rem + 66.3889vw, 64.5625rem);
-
+    width: 100%;
     @media ( min-width: 1080px){
-      flex-direction: row;
-      
 
+
+      flex-direction: row;
+      width: clamp(19.75rem, 4.8125rem + 66.3889vw, 64.5625rem);
     }
 
     div{

@@ -43,6 +43,23 @@ var title = document.querySelector('.eight')
 
 generateNoise();
 
+/////////////////////////////////////////////////
+
+function revealOnScroll() {
+  let elements = document.querySelectorAll(".reveal");
+  let windowHeight = window.innerHeight;
+  
+  elements.forEach((el) => {
+    let elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 50) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll(); // Pour vérifier au chargement
+
 
 
 
