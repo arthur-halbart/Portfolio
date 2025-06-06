@@ -645,11 +645,11 @@ footer{
       color: $c-fond;
       padding-left: 2rem;
       padding-right: 2rem;
+    }
 
-      :hover{
-        text-decoration: underline;
-        transition: 0.3s;
-      }
+    a:hover{
+      text-decoration: underline;
+      transition: 0.3s;
     }
   
     .copyright{
