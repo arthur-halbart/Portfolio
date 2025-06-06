@@ -58,9 +58,19 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
-revealOnScroll(); // Pour vérifier au chargement
+revealOnScroll();
 
 
+//////////////////////////////////////////////////////////
+
+
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu-wrapper');
+
+menuBtn.addEventListener('click', () => {
+	menuBtn.classList.toggle('open');
+	menu.classList.toggle('open');
+});
 
 
 ////////////////////////////////////////////////////////////////////:
@@ -132,39 +142,6 @@ button2.addEventListener('mouseleave', function() {
 
 
 button3.addEventListener("mouseover", function() {
-    elementFond.classList.add('element__graphique__fond--fullScreen--DataPlay');
-
-    document.addEventListener('mousemove', function(e) {
-        const follower = document.querySelector('.element__graphique__fond');
-        const size = 3000; 
-      
-        const x = e.clientX - size / 2;
-        const y = e.clientY - size / 2;
-      
-        follower.style.left = x + 'px';
-        follower.style.top = y + 'px';
-      });
-});
-  
-button3.addEventListener('mouseleave', function() {
-    elementFond.classList.remove('element__graphique__fond--fullScreen--DataPlay');
-    
-    document.addEventListener('mousemove', function(e) {
-        const follower = document.querySelector('.element__graphique__fond');
-        const size = 300; 
-      
-        const x = e.clientX - size / 2;
-        const y = e.clientY - size / 2;
-      
-        follower.style.left = x + 'px';
-        follower.style.top = y + 'px';
-      });
-});
-
-////////////////////////////::
-
-
-button4.addEventListener("mouseover", function() {
     elementFond.classList.add('element__graphique__fond--fullScreen--DesignFiction');
 
     document.addEventListener('mousemove', function(e) {
@@ -179,7 +156,7 @@ button4.addEventListener("mouseover", function() {
       });
 });
   
-button4.addEventListener('mouseleave', function() {
+button3.addEventListener('mouseleave', function() {
     elementFond.classList.remove('element__graphique__fond--fullScreen--DesignFiction');
     
     document.addEventListener('mousemove', function(e) {
@@ -196,11 +173,3 @@ button4.addEventListener('mouseleave', function() {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu-wrapper');
-
-menuBtn.addEventListener('click', () => {
-	menuBtn.classList.toggle('open');
-	menu.classList.toggle('open');
-});
