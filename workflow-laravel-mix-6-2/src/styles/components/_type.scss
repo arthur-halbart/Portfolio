@@ -627,11 +627,35 @@ footer{
   width: 100%;
   background-color: $c-text;
   color: $c-fond;
-  height: clamp(20.625rem, 14.5417rem + 27.037vw, 38.875rem);
+  height: 10rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
-  a{
-    color: $c-fond;
+  .element_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media ( min-width: 680px){
+      flex-direction: initial;
+    }
+    a{
+      color: $c-fond;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      :hover{
+        text-decoration: underline;
+        transition: 0.3s;
+      }
+    }
+  
+    .copyright{
+      font-size: 11px;
+      color: $c-fond;
+    }
   }
 }
 
@@ -757,6 +781,7 @@ footer{
     margin: 0;
     border-bottom: 1px solid #000;
     width: 100%;
+    line-height: 1.1;
 
     h3{
       align-self: flex-start;
@@ -831,8 +856,14 @@ footer{
     div{
       width: clamp(19.75rem, 16.9792rem + 12.3148vw, 28.0625rem);
       height: clamp(9.5rem, 8.125rem + 6.1111vw, 13.625rem);
-      border-bottom: 1px solid #000;
-      border-right: 1px solid #000;
+
+
+      @media ( min-width: 780px){
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+  
+      }
+
 
       padding: 20px;
       img{
@@ -971,7 +1002,6 @@ footer{
 
     .txt{
       border-right: 1px solid #000;
-      width: 100%;
       p{
         width: 100%;
       }
@@ -984,10 +1014,14 @@ footer{
 
     .txt{
       font-size: clamp(1rem, 0.8542rem + 0.6481vw, 1.4375rem);
-      width: clamp(19.75rem, 15.375rem + 19.4444vw, 32.875rem);
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-left: 0.5;
+      @media ( min-width: 680px){
+        width: clamp(19.75rem, 15.375rem + 19.4444vw, 32.875rem);
+      }
       p{
         width: 100%;
 
@@ -1068,4 +1102,33 @@ footer{
     overflow: hidden;
     
   }
+}
+
+.button_website{
+  border-top: 1px solid #000;
+  transition: 0.4s;
+
+  @media ( min-width: 780px){
+    border: none;
+  }
+  a:hover{
+      color: $c-fond;
+      transition: 0.4s;
+  }
+}
+
+.section__credits{
+  line-height: 1.5;
+
+  .dernier_el{
+    margin-bottom: 7rem;
+  }
+
+  li{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+
+  }
+
 }

@@ -2,10 +2,9 @@
 
 import { gsap } from "gsap";
 
-var button = document.querySelector('.button')
-var button2 = document.querySelector('.button2')
-var button3 = document.querySelector('.button3')
-var button4 = document.querySelector('.button4')
+const button = document.querySelector('.button')
+const button2 = document.querySelector('.button2')
+const button3 = document.querySelector('.button3')
 var elementFond = document.querySelector('.element__graphique__fond')
 var title = document.querySelector('.eight')
 
@@ -75,20 +74,23 @@ menuBtn.addEventListener('click', () => {
 
 ////////////////////////////////////////////////////////////////////:
 
-  button.addEventListener("mouseover", function() {
-    elementFond.classList.add('element__graphique__fond--fullScreen--Janus');
 
-    document.addEventListener('mousemove', function(e) {
-        const follower = document.querySelector('.element__graphique__fond');
-        const size = 3000; 
-      
+if (button) {
+    button.addEventListener("mouseover", function () {
+      elementFond.classList.add('element__graphique__fond--fullScreen--Janus');
+  
+    document.addEventListener('mousemove', function (e) {
+      const follower = document.querySelector('.element__graphique__fond');
+        const size = 3000;
+  
         const x = e.clientX - size / 2;
         const y = e.clientY - size / 2;
-      
+  
         follower.style.left = x + 'px';
         follower.style.top = y + 'px';
       });
-});
+    });
+  
   
 button.addEventListener('mouseleave', function() {
     elementFond.classList.remove('element__graphique__fond--fullScreen--Janus');
@@ -105,43 +107,47 @@ button.addEventListener('mouseleave', function() {
       });
 });
 
+}
 
 ////////////////////////////::
+if (button2) {
 
 button2.addEventListener("mouseover", function() {
-    elementFond.classList.add('element__graphique__fond--fullScreen--Prux');
+  elementFond.classList.add('element__graphique__fond--fullScreen--Prux');
 
-    document.addEventListener('mousemove', function(e) {
-        const follower = document.querySelector('.element__graphique__fond');
-        const size = 3000; 
-      
-        const x = e.clientX - size / 2;
-        const y = e.clientY - size / 2;
-      
-        follower.style.left = x + 'px';
-        follower.style.top = y + 'px';
-      });
-});
-  
-button2.addEventListener('mouseleave', function() {
-    elementFond.classList.remove('element__graphique__fond--fullScreen--Prux');
+  document.addEventListener('mousemove', function(e) {
+      const follower = document.querySelector('.element__graphique__fond');
+      const size = 3000; 
     
-    document.addEventListener('mousemove', function(e) {
-        const follower = document.querySelector('.element__graphique__fond');
-        const size = 300; 
-      
-        const x = e.clientX - size / 2;
-        const y = e.clientY - size / 2;
-      
-        follower.style.left = x + 'px';
-        follower.style.top = y + 'px';
-      });
+      const x = e.clientX - size / 2;
+      const y = e.clientY - size / 2;
+    
+      follower.style.left = x + 'px';
+      follower.style.top = y + 'px';
+    });
 });
+
+button2.addEventListener('mouseleave', function() {
+  elementFond.classList.remove('element__graphique__fond--fullScreen--Prux');
+  
+  document.addEventListener('mousemove', function(e) {
+      const follower = document.querySelector('.element__graphique__fond');
+      const size = 300; 
+    
+      const x = e.clientX - size / 2;
+      const y = e.clientY - size / 2;
+    
+      follower.style.left = x + 'px';
+      follower.style.top = y + 'px';
+    });
+});
+}
 
 ////////////////////////////::
 
 
-button3.addEventListener("mouseover", function() {
+if (button3) {
+  button3.addEventListener("mouseover", function() {
     elementFond.classList.add('element__graphique__fond--fullScreen--DesignFiction');
 
     document.addEventListener('mousemove', function(e) {
@@ -170,6 +176,7 @@ button3.addEventListener('mouseleave', function() {
         follower.style.top = y + 'px';
       });
 });
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////
